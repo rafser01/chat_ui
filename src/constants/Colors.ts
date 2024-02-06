@@ -31,7 +31,8 @@ const colors: Color = {
   mantionTextBg: '#e4f0ee',
   mantionText: '#4ca0d8',
   thumbContainer: '#f3f3f1',
-  borderColor: '#e6e6e6'
+  borderColor: '#e6e6e6',
+  replayMessage: '#7e5f31',
 };
 
 export default colors;

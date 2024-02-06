@@ -11,7 +11,7 @@ const ReplayMessage = (props: Props) => {
     <View style={styles.threaderAvatarContainer}>
       <Image source={Avatar2} style={styles.avatarTwoStyle} />
       <View style={styles.replayMessageTextContainer}>
-        <Text style={{color: '#7e5f31'}}>
+        <Text style={styles.replayMessage}>
           Hey
           <Text style={styles.mantionText}> @Robert_Mendez </Text>
           can you share an ETA with Angela?
@@ -63,5 +63,9 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingHorizontal: 10,
     paddingVertical: 8,
+  },
+  replayMessage: {
+    color: colors.replayMessage,
+    fontWeight: '600'
   },
 });

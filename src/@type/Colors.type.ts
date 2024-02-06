@@ -29,4 +29,5 @@ export interface Color {
   mantionText: string;
   thumbContainer: string;
   borderColor: string;
+  replayMessage: string;
 }

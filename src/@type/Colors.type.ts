@@ -1,0 +1,32 @@
+export interface Color {
+  defaultColor: string;
+  backgroundTransparent: string;
+  defaultBlue: string;
+  leftBubbleBackground: string;
+  black: string;
+  white: string;
+  carrot: string;
+  emerald: string;
+  peterRiver: string;
+  wisteria: string;
+  alizarin: string;
+  turquoise: string;
+  midnightBlue: string;
+  optionTintColor: string;
+  timeTextColor: string;
+  checkImageTint: string;
+  messageTextColor: string;
+  voiceMailPlayerBg: string;
+  grey1: string;
+  replayButtonBg: string;
+  replayButtonText: string;
+  mainReplayMessageContainer: string;
+  missedCallText: string;
+  noAnswareText: string;
+  transcriptText: string;
+  todayText: string;
+  mantionTextBg: string;
+  mantionText: string;
+  thumbContainer: string;
+  borderColor: string;
+}

@@ -1,4 +1,11 @@
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import React from 'react';
 
 import PlayImage from '../assets/img/play.png';
@@ -9,16 +16,16 @@ import ThreeDotsImage from '../assets/img/threeDots.png';
 
 type Props = {};
 
-const Player = (props: Props) => {
+const Player: React.FC<Props> = () => {
   return (
     <View style={styles.voicemailPlayer}>
-      <Image source={PlayImage} style={{height: 20, width: 20}} />
-      <Image source={SliderImage} style={{height: 20, width: 80}} />
+      <Image source={PlayImage} style={styles.play} />
+      <Image source={SliderImage} style={styles.slider} />
       <Text>00:12</Text>
-      <Image source={SpeakerImage} style={{height: 30, width: 30}} />
-      <Image source={Slider2Image} style={{height: 20, width: 40}} />
-      <TouchableOpacity onPress={() => alert('Text more')}>
-        <Image source={ThreeDotsImage} style={{height: 15, width: 25}} />
+      <Image source={SpeakerImage} style={styles.speaker} />
+      <Image source={Slider2Image} style={styles.slider2} />
+      <TouchableOpacity onPress={() => Alert.alert('Text more')}>
+        <Image source={ThreeDotsImage} style={styles.threeDots} />
       </TouchableOpacity>
     </View>
   );
@@ -36,4 +43,9 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 10,
   },
+  play: {height: 20, width: 20},
+  slider: {height: 20, width: 80},
+  speaker: {height: 30, width: 30},
+  slider2: {height: 20, width: 40},
+  threeDots: {height: 15, width: 25},
 });

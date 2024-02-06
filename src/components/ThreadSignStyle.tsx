@@ -1,10 +1,10 @@
-import {View, StyleSheet} from 'react-native';
 import React from 'react';
+import {View, StyleSheet} from 'react-native';
 import colors from '../constants/Colors';
 
 type Props = {};
 
-const ThreadSignStyle = (props: Props) => (
+const ThreadSignStyle: React.FC<Props> = () => (
   <View style={styles.threadSignStyle} />
 );
 

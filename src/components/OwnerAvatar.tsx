@@ -1,13 +1,14 @@
-import {View, Image, StyleSheet} from 'react-native';
 import React from 'react';
+import {View, Image, StyleSheet} from 'react-native';
+
 import Avatar1 from '../assets/img/avatar1.png';
 
 type Props = {};
 
-const OwnerAvatar = () => {
+const OwnerAvatar: React.FC<Props> = () => {
   return (
     <View style={styles.avatarContainer}>
-      <Image source={Avatar1} style={{height: 50, width: 50}} />
+      <Image source={Avatar1} style={styles.avatarImageStyle} />
     </View>
   );
 };
@@ -21,4 +22,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     top: -130,
   },
+  avatarImageStyle: {height: 50, width: 50},
 });

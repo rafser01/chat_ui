@@ -1,17 +1,15 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import VoiceMail from '../assets/img/voicemail.png';
 import colors from '../constants/Colors';
 
 type Props = {};
 
-
-const MissedCall = (props: Props) => {
+const MissedCall: React.FC<Props> = () => {
   return (
     <View style={styles.missedCallContainer}>
-      {/* <MaterialIcons name="voicemail" size={24} color="red" /> */}
-      <Image source={VoiceMail} style={{height: 50, width: 50}} />
-      {/* === Main Replay Missedcall container === */}
+      <Image source={VoiceMail} style={styles.voiceMailImage} />
+
       <View style={styles.missedCallTextContainer}>
         <Text style={styles.missedCallText}>Missed call</Text>
         <Text style={styles.noAnsweredText}>No one answered</Text>
@@ -43,4 +41,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colors.noAnswareText,
   },
+  voiceMailImage: {height: 50, width: 50},
 });

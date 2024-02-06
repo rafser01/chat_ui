@@ -1,7 +1,14 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Avatar2 from '../assets/img/avatar2.png';
-import RoundedCheckImage from '../assets/img/avatar2.png';
+import RoundedCheckImage from '../assets/img/roundedCheck.png';
 import ThreeDotsImage from '../assets/img/threeDots.png';
 import colors from '../constants/Colors';
 import {pluralize} from '../utils/Pluralize';
@@ -14,7 +21,7 @@ const ReplayHeader: React.FC<Props> = ({commentCount}) => {
   return (
     <View style={styles.replayThreadHeader}>
       <View style={styles.leftHeader}>
-        <Image source={Avatar2} style={{height: 20, width: 20}} />
+        <Image source={Avatar2} style={styles.imgStyle} />
         <Text style={styles.commentText}>
           {commentCount} {pluralize(commentCount, 'comment')}
         </Text>
@@ -22,15 +29,12 @@ const ReplayHeader: React.FC<Props> = ({commentCount}) => {
       </View>
       <View style={styles.rightHeader}>
         <Image
-          tintColor={'#a7a7a7'}
+          tintColor={colors.checkImageTint}
           source={RoundedCheckImage}
           style={styles.checkImageStyle}
         />
-        <TouchableOpacity onPress={() => alert('Three dot press')}>
-          <Image
-            source={ThreeDotsImage}
-            style={{height: 15, width: 20, marginTop: 3}}
-          />
+        <TouchableOpacity onPress={() => Alert.alert('Three dot press')}>
+          <Image source={ThreeDotsImage} style={styles.threeDots} />
         </TouchableOpacity>
       </View>
     </View>
@@ -68,4 +72,6 @@ const styles = StyleSheet.create({
     width: 20,
     resizeMode: 'contain',
   },
+  imgStyle: {height: 20, width: 20},
+  threeDots: {height: 15, width: 20, marginTop: 3},
 });

@@ -1,7 +1,7 @@
 import {
+  Alert,
   Image,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -14,28 +14,19 @@ import ThreeDotsImage from '../assets/img/threeDots.png';
 import SendMessage from '../assets/img/sendMessage.png';
 import ManEmoji from '../assets/img/manEmoji.png';
 
-const InputMessage = (props: Props) => {
+const InputMessage: React.FC<Props> = () => {
   return (
     <View style={styles.inputContainer}>
       <TextInput placeholder="Replay internally..." />
-      <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity onPress={() => alert('Text more')}>
-          <Image
-            source={ThreeDotsImage}
-            style={{height: 15, width: 25, marginTop: 2}}
-          />
+      <View style={styles.flexRow}>
+        <TouchableOpacity onPress={() => Alert.alert('Text more')}>
+          <Image source={ThreeDotsImage} style={styles.threeDotsImgStyle} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image
-            source={ManEmoji}
-            style={{height: 20, width: 20, marginHorizontal: 2}}
-          />
+          <Image source={ManEmoji} style={styles.manEmojiImage} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image
-            source={SendMessage}
-            style={{height: 20, width: 20, marginLeft: 5}}
-          />
+          <Image source={SendMessage} style={styles.sendMessageImage} />
         </TouchableOpacity>
       </View>
     </View>
@@ -58,4 +49,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 10,
   },
+  flexRow: {flexDirection: 'row'},
+  threeDotsImgStyle: {height: 15, width: 25, marginTop: 2},
+  manEmojiImage: {height: 20, width: 20, marginHorizontal: 2},
+  sendMessageImage: {height: 20, width: 20, marginLeft: 5},
 });

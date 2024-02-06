@@ -1,13 +1,5 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-
-import PlayImage from '../assets/img/play.png';
-import SliderImage from '../assets/img/slider.png';
-import Slider2Image from '../assets/img/slider2.png';
-import SpeakerImage from '../assets/img/speaker.png';
-import ThreeDotsImage from '../assets/img/threeDots.png';
-import Avatar2 from '../assets/img/avatar2.png';
-import RoundedCheckImage from '../assets/img/avatar2.png';
 import OwnerAvatar from '../components/OwnerAvatar';
 import ThreadSignStyle from '../components/ThreadSignStyle';
 import MissedCall from '../components/MissedCall';
@@ -19,11 +11,11 @@ import CommentTranscript from '../components/CommentTranscript';
 
 const ChatUI = () => {
   return (
-    <View style={{flexDirection: 'row', flex: 1}}>
+    <View style={styles.subContainer}>
       {/* ::: Avatar ::: */}
       <OwnerAvatar />
       {/* ::: Bubble ::: */}
-      <View style={{flex: 0.9}}>
+      <View style={styles.flexNinety}>
         {/* === Main Replay Message === */}
         <View style={styles.mainReplayMessageContainer}>
           {/* === Main Replay header === */}
@@ -72,6 +64,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10,
   },
+  subContainer: {flexDirection: 'row', flex: 1},
+  flexNinety: {flex: 0.9},
 });
 
 export default ChatUI;

@@ -6,7 +6,7 @@ type Props = {};
 import Avatar2 from '../assets/img/avatar2.png';
 import colors from '../constants/Colors';
 
-const ReplayMessage = (props: Props) => {
+const ReplayMessage: React.FC<Props> = () => {
   return (
     <View style={styles.threaderAvatarContainer}>
       <Image source={Avatar2} style={styles.avatarTwoStyle} />
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
   },
   replayMessage: {
     color: colors.replayMessage,
-    fontWeight: '600'
+    fontWeight: '600',
   },
 });
